@@ -2,7 +2,11 @@ from datetime import UTC, datetime
 
 from flask import Flask
 
-app = Flask(__name__)
+app = Flask(
+    __name__,
+    static_folder="../build",
+    static_url_path="/",
+)
 
 
 @app.route("/api/time")

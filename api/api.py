@@ -9,6 +9,11 @@ app = Flask(
 )
 
 
+@app.route("/")
+def index():
+    return app.send_static_file("index.html")
+
+
 @app.route("/api/time")
 def get_current_time():
     current_time = datetime.now(tz=UTC)

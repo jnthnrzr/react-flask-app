@@ -14,7 +14,7 @@ WORKDIR /app
 COPY --from=build-step /app/build ./build
 
 RUN mkdir ./api
-COPY api/requirements.txt api/api.py api/.flaskenv ./api
+COPY api/ ./api
 RUN pip install -r ./api/requirements.txt
 ENV FLASK_ENV production
 

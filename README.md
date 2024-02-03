@@ -1,4 +1,13 @@
-# Getting Started with Create React App
+# react-flask-app
+
+To start using Docker:
+
+```shell
+docker build -t react-flask-app .
+docker run --rm -p 3000:3000 react-flask
+```
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

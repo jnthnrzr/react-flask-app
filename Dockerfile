@@ -9,7 +9,7 @@ RUN yarn install
 RUN yarn build
 
 # Build step #2: build the API with the client as static files
-FROM python:3.11
+FROM python:3.11-alpine
 WORKDIR /app
 COPY --from=build-step /app/build ./build
 

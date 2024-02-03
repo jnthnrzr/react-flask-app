@@ -1,5 +1,6 @@
 services:
   prod:
+    image: jnthnrzr/basic-web-app:v0.1.0
     build:
       context: .
     ports:

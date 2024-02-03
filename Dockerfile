@@ -13,17 +13,6 @@ FROM python:3.11-alpine
 WORKDIR /app
 COPY --from=build-step /app/build ./build
 
-# COPY api/requirements.txt api/api.py api/.flaskenv ./
-# RUN pip install -r requirements.txt
-# ENV FLASK_ENV production
-
-# EXPOSE 5000
-# CMD ["gunicorn", "-b", ":5000", "api:app"]
-
-# FROM python:3.9
-# WORKDIR /app
-# COPY --from=build-step /app/build ./build
-
 RUN mkdir ./api
 COPY api/requirements.txt api/api.py api/.flaskenv ./api
 RUN pip install -r ./api/requirements.txt
